@@ -1,0 +1,31 @@
+*
+{
+    padding: 0%;
+    margin: 0%;
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+   background-color: bisque;
+   height: 600px;
+   width: 600px;
+
+}
+
+.screen{
+    display: flex;
+    height: 50px;
+    width: 500px;
+    background-color: aliceblue;
+}
