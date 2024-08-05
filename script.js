@@ -1,59 +1,57 @@
-const isequal = document.querySelector("#isequal")
-const  screen = document.querySelector("#screen")
-const  AC = document.getElementById("AC")
-const root_button = document.getElementById("root")
-const square_button = document.getElementById("square")
-
-
-function print (content){
-    console.log(content)
-    let old_expression = screen.innerHTML;
-    screen.innerHTML = old_expression+content;
-}
-
-function evals (){
-    let experession = screen.innerHTML;
-    clear()
-    let answer = eval(experession);
-    print(answer)
-}
+const screen = document.getElementById("screen");
 
 function clear (){
-    screen.innerHTML = " "
-    console.log("called")
+	console.log("this is clear 1")
+	screen.innerText = " "
+	console.log("this is clear 2")
 }
 
-function  root (){
-    let value = screen.innerHTML;
-    clear();
-    value_int = parseInt(value);
-    if (value_int >0)
-    {
-        print(Math.sqrt(value_int));
-    }
-
-    else {
-        //pass
-    }
-    }
-
-AC.addEventListener("click",clear)
-root_button.addEventListener("click",root)
-
-
- square = () => {
-
-     let value = screen.innerHTML;
-     clear();
-     if (value > 0) {
-         print(value ** 2);
-     }
-
-     else{
-         //pass
-     }
-
+function print(content) {
+	console.log(content)
+	screen.innerText += content;
 }
 
-square_button.addEventListener("click",square)
-isequal.addEventListener("click",evals)
+document.getElementById("isequal")
+	.addEventListener("click", () => {
+		let expression = screen.innerText.replaceAll("x", "*");
+		clear()
+		let answer = eval(expression);
+		print(answer);
+	})
+
+document.getElementById("ac")
+	.addEventListener("click", () => {
+		screen.innerText = "";
+	});
+
+document.getElementById("root")
+	.addEventListener("click", () => {
+		let value = screen.innerText;
+		clear();
+		let value_int = parseInt(value);
+
+		if (value_int > 0) print(Math.sqrt(value_int));
+	});
+
+document.getElementById("square")
+	.addEventListener("click", () => {
+		let value = parseInt(screen.innerText);
+
+		clear();
+		if (value > 0) print(value ** 2);
+	});
+
+Array.from(document.getElementsByClassName("number"))
+	.forEach(element => {
+		element.addEventListener("click", () => {
+			print(element.innerText);
+		});
+	});
+
+Array.from(document.getElementsByClassName("operation"))
+	.forEach(element => {
+		element.addEventListener("click", () => {
+			// if (element.innerText === "x") element.innerText = "*";
+			print(element.innerText);
+		})
+	})

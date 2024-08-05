@@ -1,82 +1,84 @@
-*
-{
-    padding: 0;
-    margin: 0;
-    font-size: 25px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
     box-sizing: border-box;
 }
 
-
 body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: aqua;
+    background: linear-gradient(45deg, rgb(173, 58, 211), rgb(211, 94, 58), rgb(43, 83, 210));
+    padding: 0;
+    margin: 0;
     height: 100vh;
     width: 100vw;
+    font-size: 27px;
 }
 
 .container{
     display: flex;
     justify-content: center;
-   background-color: bisque;
-   height: 600px;
-   width: 600px;
-   flex-direction: column;
-   align-items: center;
-
+    background-color: rgba(79, 79, 79, 0.48);
+    border-radius: 15px;
+    box-shadow: 0 5px 55px black;
+    height: 600px;
+    width: 600px;
+    flex-direction: column;
+    align-items: center;
 }
 
-
+.logo {
+    background-color: white;
+    border-radius: 4px;
+    margin: 10px 0 20px 0;
+    font-family: "Times New Roman";
+}
 
 #screen{
     display: flex;
     height: 80px;
     width: 500px;
-    background-color: aliceblue;
+    background-color: rgba(255, 255, 255, 0.19);
     margin-bottom: 25px;
-    border-radius: 10px;
+    border-radius: 5px;
     align-items: center;
     justify-content: start;
     padding-left: 10px;
-    border: solid 4px black;
+    border: solid 1px #3f3f3f;
 }
 
 .buttons{
     display: grid;
     height: 400px;
     width: 500px;
-
     grid-template-columns: auto auto auto auto;
     grid-template-rows: auto auto auto auto auto;
-    /*border-radius: 10px;*/
-
-    border: 2px solid black;
+    /*border: 1px solid black;*/
 }
 
-
-.button{
-    display: flex;
-    border-color: black;
-    border-width: 2px;
-    border-style: solid;
-    transition: 0.2s;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-
-button{
-    border: 0;
-    border-radius: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
+.button {
     align-items: center;
     justify-content: center;
+    background-color: #303136;
+    color: white;
+    display: flex;
+    /*border-color: black;*/
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
+    transition: 0.2s;
+    margin: 5px 5px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #zero {
@@ -85,14 +87,13 @@ button{
 }
 
 .operation {
-    /*border: 2px dotted red;*/
-        display: flex;
-        border-color: black;
-        border-width: 2px;
-        border-style: solid;
-        background-color: #008CBA;
+    background-color: #ff6200;
 }
 
-.operation button {
-    background-color: #3b5998;
+.custom-operation {
+    background-color: #585C5F;
+}
+
+#isequal {
+    background-color: #ff596d;
 }
