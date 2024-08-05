@@ -26,13 +26,15 @@ body{
 
 }
 
-.screen{
+#screen{
     display: flex;
     height: 80px;
     width: 500px;
     background-color: aliceblue;
     margin-bottom: 25px;
     border-radius: 10px;
+    align-items: center;
+    justify-content: start;
 }
 
 .buttons{
@@ -41,7 +43,7 @@ body{
     width: 500px;
     background-color: blue;
     grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     border-radius: 10px;
 
 }
@@ -60,4 +62,9 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#zero {
+    grid-column-start: 1;
+    grid-column-end: 3;
 }

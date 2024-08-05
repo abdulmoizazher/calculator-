@@ -3,97 +3,123 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script src="script.js">
 
-    </script>
     <div class="container">
-        <div class="screen"></div>
+        <div id="screen"> </div>
         <div class="buttons">
-            <div class="button" id="operator">
-                <button>7</button>
+            <div class="button" class="operation">
+                <button id="AC">
+                    AC
+                </button>
             </div>
-            <div class="button" id="operator">
-                <button>8</button>
+
+            <div class="button" class="operation">
+                <button  id = "root">
+                    ^1/2
+                </button>
             </div>
-            <div class="button" id="operator">
-                <button>9</button>
+
+            <div class="button" class="operation">
+                <button onclick="print('+')">
+                    %
+                </button>
             </div>
-            <div class="button" id="operation">
-                <button>
+
+            <div class="button" class="operation">
+                <button onclick="print('/')">
                     /
                 </button>
             </div>
-            <div class="button" id="operator">
-                <button>
-                    4
-                </button>
+
+            <div class="button" class="operator">
+                <button onclick="print('7')">7</button>
             </div>
-            <div class="button" id="operator">
-                <button>
-                    5
-                </button>
+            <div class="button" class="operator">
+                <button onclick="print('8')">8</button>
             </div>
-            <div class="button" id="operator">
-                <button>
-                    6
-                </button>
+            <div class="button" class="operator">
+                <button onclick="print('9')">9</button>
             </div>
-            <div class="button" id="operation">
-                <button>
+            <div class="button" class="operation">
+                <button onclick="print('*')">
                     x
                 </button>
             </div>
-            <div class="button" id="operator">
-                <button>
-                    1
+            <div class="button" class="operator">
+                <button onclick="print('4')">
+                    4
                 </button>
             </div>
-            <div class="button" id="operator">
-                <button>
-                    2
+            <div class="button" class="operator">
+                <button onclick="print('5')">
+                    5
                 </button>
             </div>
-            <div class="button" id="operator">
-                <button>
-                    3
+            <div class="button" class="operator">
+                <button onclick="print('6')">
+                    6
                 </button>
             </div>
-            <div class="button" id="operation">
-                <button>
+            <div class="button" class="operation">
+                <button onclick="print('-')">
                     -
                 </button>
             </div>
-            <div class="button" id="operator">
-                <button>
+            <div class="button" class="operator">
+                <button onclick="print('1')">
+                    1
+                </button>
+            </div>
+            <div class="button" class="operator">
+                <button onclick="print('2')">
+                    2
+                </button>
+            </div>
+            <div class="button" class="operator">
+                <button onclick="print('3')">
+                    3
+                </button>
+            </div>
+
+            <div class="button" class="operation">
+                <button onclick="print('+')">
+                    +
+                </button>
+            </div>
+
+            <div class="button" class="operator" id="zero">
+                <button onclick="print('0')">
                     0
                 </button>
             </div>
 
-            <div class="button" id="operator">
-                <button>
+
+            <div class="button" class="operator">
+                <button onclick="print('.')">
                     .
                 </button>
             </div>
-            <div class="button" id="isequal">
-                <button>
+
+            <div class="button" class="isequal">
+                <button onclick="evals()">
                     =
                 </button>
             </div>
-            <div class="button" id="operation">
-                <button>
-                    +
-                </button>
-            </div>
-            
+
+
+
+
         </div>
     
     </div>
-    
+    <script src="script.js">
+
+    </script>
 
 </body>
 </html>
