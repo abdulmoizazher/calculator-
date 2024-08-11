@@ -26,7 +26,7 @@ document.getElementById("ac")
 
 document.getElementById("root")
 	.addEventListener("click", () => {
-		let value = screen.innerText;
+		let value = eval(screen.innerText);
 		clear();
 		let value_int = parseInt(value);
 
@@ -35,8 +35,8 @@ document.getElementById("root")
 
 document.getElementById("square")
 	.addEventListener("click", () => {
-		let value = parseInt(screen.innerText);
-
+		let value = eval(screen.innerText);
+		
 		clear();
 		if (value > 0) print(value ** 2);
 	});
